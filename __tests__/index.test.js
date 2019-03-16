@@ -171,6 +171,14 @@ test('ajax structure', () => {
 	expect(typeof api.ajax.cart.addItem).toBe('function');
 	expect(typeof api.ajax.cart.updateItem).toBe('function');
 	expect(typeof api.ajax.cart.deleteItem).toBe('function');
+	expect(typeof api.ajax.login.retrieve).toBe('function');
+	expect(typeof api.ajax.register.retrieve).toBe('function');
+	expect(typeof api.ajax.account.retrieve).toBe('function');
+	expect(typeof api.ajax.account.update).toBe('function');
+	expect(typeof api.ajax.forgotPassword.retrieve).toBe('function');
+	expect(typeof api.ajax.forgotPassword.update).toBe('function');
+	expect(typeof api.ajax.resetPassword.retrieve).toBe('function');
+	expect(typeof api.ajax.resetPassword.update).toBe('function');
 	expect(typeof api.ajax.countries.list).toBe('function');
 	expect(typeof api.ajax.currencies.list).toBe('function');
 	expect(typeof api.ajax.shippingMethods.list).toBe('function');
