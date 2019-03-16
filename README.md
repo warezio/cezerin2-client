@@ -19,7 +19,7 @@ npm i cezerin2-client
 ## Initialize
 
 ```javascript
-import CezerinClient from 'cezerin-client';
+import CezerinClient from 'cezerin2-client';
 
 const api = new CezerinClient({
   apiBaseUrl: 'https://website.com/api/v1',
