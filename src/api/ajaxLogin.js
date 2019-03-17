@@ -6,5 +6,4 @@ export default class AjaxLogin {
 	retrieve(data) {
 		return this.client.post(`/login`, data);
 	}
-
 }
