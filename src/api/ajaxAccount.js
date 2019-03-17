@@ -10,5 +10,4 @@ export default class AjaxAccount {
 	update(data) {
 		return this.client.put(`/customer-account`, data);
 	}
-
 }

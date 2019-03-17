@@ -6,5 +6,4 @@ export default class AjaxRegister {
 	retrieve(data) {
 		return this.client.post(`/register`, data);
 	}
-
 }

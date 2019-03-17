@@ -10,5 +10,4 @@ export default class AjaxResetPassword {
 	update(data) {
 		return this.client.put(`/reset-password`, data);
 	}
-
 }
