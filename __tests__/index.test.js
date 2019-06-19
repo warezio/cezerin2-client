@@ -135,6 +135,8 @@ test('api structure', () => {
 	expect(typeof api.tokens.create).toBe('function');
 	expect(typeof api.tokens.update).toBe('function');
 	expect(typeof api.tokens.delete).toBe('function');
+	expect(typeof api.tokens.revoke).toBe('function');
+	expect(typeof api.tokens.reinstate).toBe('function');
 	expect(typeof api.redirects.list).toBe('function');
 	expect(typeof api.redirects.retrieve).toBe('function');
 	expect(typeof api.redirects.create).toBe('function');

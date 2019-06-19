@@ -23,4 +23,12 @@ export default class Tokens {
 	delete(id) {
 		return this.client.delete(`${this.resourceUrl}/${id}`);
 	}
+
+	revoke(id) { 
+		return this.client.put(`${this.resourceUrl}/${id}/revoke`);
+	}
+
+	reinstate(id) { 
+		return this.client.put(`${this.resourceUrl}/${id}/reinstate`);
+	}
 }
