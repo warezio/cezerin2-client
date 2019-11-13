@@ -20,6 +20,14 @@ export default class Settings {
 		return this.client.put(`${this.resourceUrl}/email`, data);
 	}
 
+	retrieveImportSettings() {
+		return this.client.get(`${this.resourceUrl}/import`);
+	}
+
+	updateImportSettings(data) {
+		return this.client.put(`${this.resourceUrl}/import`, data);
+	}
+
 	retrieveEmailTemplate(name) {
 		return this.client.get(`${this.resourceUrl}/email/templates/${name}`);
 	}
