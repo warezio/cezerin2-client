@@ -1,9 +1,0 @@
-export default class AjaxPaymentFormSettings {
-	constructor(client) {
-		this.client = client;
-	}
-
-	retrieve() {
-		return this.client.get('/payment_form_settings');
-	}
-}

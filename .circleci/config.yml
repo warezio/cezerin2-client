@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:8
+      - image: circleci/node
 
     working_directory: ~/repo
 
@@ -10,7 +10,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-{{ checksum "package.json" }}
 
       - run:
           name: Install Dependencies
@@ -20,17 +20,18 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-       
-      - run: 
-          name: Tests 
+
+      - run:
+          name: Tests
           command: npm run test
 
       - store_test_results:
           path: reports
 
-      - run: 
-          name: Build 
+      - run:
+          name: Lint
+          command: prettier --write .
+
+      - run:
+          name: Build
           command: npm run build
-
-
-
